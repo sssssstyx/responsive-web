@@ -1,25 +1,30 @@
 import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import Home from './app/home';
+
+const AppContainer = styled.div`
+    ${tw`
+        flex
+        w-full
+        h-full
+        overflow-x-hidden
+    `};
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          <Router>
+              <AppContainer>
+                  <Home />
+              </AppContainer>
+          </Router>
+      </div>
+      
   );
 }
 
