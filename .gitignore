@@ -27,3 +27,4 @@ yarn-error.log*
 /src/setupTests.ts
 /src/logo.svg
 /src/App.test.tsx
+/src/app/home/content

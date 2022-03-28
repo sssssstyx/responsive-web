@@ -9,7 +9,10 @@ export default function Video() {
             <VideoStyle autoPlay loop muted>
                 <source src={video} type="video/mp4"/>
             </VideoStyle>
-            
+            <div className={""}>
+                <ButtonStyle className={""} onClick={()=>{
+                    console.log ("1")}}>See more</ButtonStyle>
+            </div>
         </>
     )
 }
@@ -44,3 +47,32 @@ const VideoStyle = styled.video`
     `}
 `;
 
+const ButtonStyle = styled.div`
+    ${tw`
+        /* 位置 */
+        flex
+        
+        /* 字体样式、颜色、大小 */
+        font-bold
+        text-3xl
+        text-zinc-500
+        md:font-extrabold
+        lg:font-black
+        
+        /* 边框 */
+        border-transparent
+        border-2
+        border-solid
+        
+        /* 鼠标动作 */
+        cursor-pointer
+        hover:text-orange-550
+        hover:border-black rounded-xl
+        hover:shadow-[0_35px_60px_-15px_#CBD5E1FF]
+        transition
+        duration-200 ease-in-out
+        
+        
+        z-10
+    `}
+`;
