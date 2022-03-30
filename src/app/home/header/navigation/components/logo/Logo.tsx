@@ -22,7 +22,11 @@ const LogoStyle = styled.div`
         w-28
         md:w-40
         lg:w-52
-        ml-3
+        
+        /*  图片属性 */
         [> img]:w-auto h-auto sm:pb-3 bg-transparent
+        
+        /* z-index-2 */
+        z-[2]
     `};
 `;

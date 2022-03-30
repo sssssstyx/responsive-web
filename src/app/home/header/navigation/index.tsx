@@ -22,13 +22,16 @@ const NavbarStyle = styled.nav`
     ${tw`
         /* 颜色(定义在外部div中) */
         
-        /* 高度、长度 */
-        w-full
-        h-14
-        sm:h-10
+        /* 高度、宽度 */
         
-        /* 最大长度 */
-        max-w-7xl
+        h-14
+        sm:h-12
+        
+        /* 外部轮廓大小 */
+        sm:mt-5
+        sm:mx-16
+        2xl:mx-auto
+        2xl:px-8
         
         /* 位置、排列方式 */
         flex
@@ -36,8 +39,11 @@ const NavbarStyle = styled.nav`
         justify-center
         sm:justify-between
         
-        /* z-index */
-        z-20
+        /* 最大宽度: 1536px */
+        xl:max-w-screen-2xl
+        
+        /* z-index:2 */
+        z-[2]
     `};
 `;
 
@@ -52,6 +58,7 @@ const NavMenuContainer = styled.div`
     ${tw`
         /* 无背景颜色 */
         bg-transparent
+        
         /* 位置 */
         flex
         items-center

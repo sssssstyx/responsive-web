@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import Nav from './header/navigation'
 import Content from './content'
-import Video from './content/components/video/Video'
+import Video from '../components/video/Video'
 
 export default function Home(){
     return (
@@ -11,7 +11,8 @@ export default function Home(){
             <HeaderStyles>
                 <Nav />
             </HeaderStyles>
-    
+            <Video />
+            <BcStyles />
             <ContentStyles>
                 <Content />
             </ContentStyles>
@@ -22,12 +23,15 @@ export default function Home(){
 // Home page
 const HomeStyles = styled.div`
     ${tw`
-        flex
-        flex-row
+        
         /* 位置大小 */
+        flex
+        flex-col
+        
         w-full
         h-full
-        items-center
+        
+        /* 排列方式 */
         overflow-x-hidden
     `};
 `;
@@ -35,14 +39,15 @@ const HomeStyles = styled.div`
 // Header
 const HeaderStyles = styled.div`
     ${tw`
+        /* Display */
+        
+        
         /* 颜色(空) */
         
         /* 位置大小 */
-        flex
-        items-center
-        justify-center
-        top-0
-        left-0
+        
+        
+        /* 高、宽 */
         w-full
         h-16
         sm:h-20
@@ -50,12 +55,38 @@ const HeaderStyles = styled.div`
     `}
 `
 
+// Before Content
+const BcStyles = styled.div`
+    ${tw`
+        /* 位置大小 */
+        flex
+        relative
+        
+        /* mobile < 640px：65vh  */
+        h-[65vh]
+        
+        /* sm > 640px: 36vh */
+        sm:h-[50vh]
+        
+        /* md 768px: 70vh */
+        md:h-[60vh]
+        
+        /* lg 1024px: 70vh */
+        lg:h-[65vh]
+        
+        /* xl 1280px: 50vh */
+        xl:h-[60vh]
+        
+        /* 2xl 1536px: 50vh */
+        xl:h-[50vh]
+    `}
+`
+
+
 // Content
 const ContentStyles = styled.div`
     ${tw`
-        
         /* 位置大小 */
-        flex
         
     `}
 `

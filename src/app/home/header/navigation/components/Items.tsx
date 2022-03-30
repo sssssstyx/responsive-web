@@ -10,7 +10,7 @@ export default function Items(){
                 <Link to="/racing">Racing</Link>
             </NavItem>
             <NavItem>
-                <Link to="/discover">Discover</Link>
+                <Link to="/discover">Bespoke</Link>
             </NavItem>
             <NavItem>
                 <Link to="/careers">Careers</Link>
@@ -52,24 +52,27 @@ const NavItem = styled.li`
         /* 字体颜色、位置、大小 */
         text-zinc-900
         sm:text-zinc-100
-        text-2xl
-        md:text-2xl
-        lg:text-4xl
+        md:font-light
         font-medium
+        text-lg
+        md:text-xl
+        lg:text-2xl
+        lg:uppercase
+        justify-center
         
-        /* 内部轮廓大小 */
+        /* 内部轮廓 */
         w-28
         h-8
         sm:w-full
         sm:h-full
-        px-2
+        pr-5
         sm:p-0
         
-        /* 外部轮廓大小 */
+        /* 外部轮廓 */
         my-6
+        ml-5
         sm:my-0
-        sm:mr-5
-        md:mr-6
+        sm:ml-5
         
         /* 边框 */
         rounded-2xl

@@ -1,16 +1,16 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import tw from 'twin.macro'
 import { FiMenu } from 'react-icons/fi'
 import { VscChromeClose } from 'react-icons/vsc'
-import { OnClickOutsideHook } from '../../../../hooks/hooks'
+// import { OnClickOutsideHook } from '../../../../hooks/hooks'
 import Items from "./Items"
 
 export default function NavMenu() {
     const [open, setOpen] = useState<boolean | null>(false)
     
-    const closeRef = useRef<any>(open);
-    OnClickOutsideHook(closeRef,() =>setOpen(false))
+    // const closeRef = useRef<any>(open);
+    // OnClickOutsideHook(closeRef,() =>setOpen(false))
     
     return (
         <div className="">
@@ -32,6 +32,8 @@ export default function NavMenu() {
 // Sidebar main styles
 const MobileSideBar = styled.div`{
     ${tw`
+        /* Display */
+
         /* 位置 */
         fixed
         flex
@@ -40,7 +42,7 @@ const MobileSideBar = styled.div`{
         items-center
         justify-center
         
-        /* sidebar大小尺寸 */
+        /* sidebar高、宽 */
         sm:hidden
         h-full
         w-full
@@ -56,6 +58,9 @@ const MobileSideBar = styled.div`{
         transition
         duration-300
         ease-in-out
+        
+        /* z-index-2 */
+        z-[2]
     `}
 }`
 
@@ -81,8 +86,8 @@ const MobileIconStyle = styled(FiMenu)`
         /* 鼠标大小 */
         cursor-pointer
         
-        /* z-index */
-        z-20
+        /* z-index-3 */
+        z-[3]
     `}
 `;
 
@@ -109,8 +114,8 @@ const MobileCloseIconStyle = styled(VscChromeClose)`
         /* 鼠标指针变化 */
         cursor-pointer
         
-        /* z-index-30 */
-        z-30
+        /* z-index-4 */
+        z-[4]
     `}
 `;
 

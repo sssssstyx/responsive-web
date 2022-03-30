@@ -1,19 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import Home from './app/home';
 
-const AppContainer = styled.div`
-    ${tw`
-        flex
-        w-full
-        h-full
-        overflow-x-hidden
-    `};
-`;
 
 function App() {
   return (
@@ -27,5 +18,17 @@ function App() {
       
   );
 }
+
+const AppContainer = styled.div`
+    ${tw`
+        /* Display */
+        flex
+        
+        /* 高、宽 */
+        w-[100vw]
+        h-[100vh]
+        overflow-x-hidden
+    `};
+`;
 
 export default App;
