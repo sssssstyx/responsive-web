@@ -22,9 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.gitignore
+/.gitignore
 /src/reportWebVitals.ts
 /src/setupTests.ts
 /src/logo.svg
 /src/App.test.tsx
-/src/app/home/content
