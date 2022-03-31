@@ -63,22 +63,22 @@ const BcStyles = styled.div`
         relative
         
         /* mobile < 640px：65vh  */
-        h-[65vh]
+        h-[60%]
         
         /* sm > 640px: 36vh */
-        sm:h-[50vh]
+        sm:h-[50%]
         
         /* md 768px: 70vh */
-        md:h-[60vh]
+        md:h-[60%]
         
         /* lg 1024px: 70vh */
-        lg:h-[65vh]
+        lg:h-[65%]
         
         /* xl 1280px: 50vh */
-        xl:h-[60vh]
+        xl:h-[60%]
         
         /* 2xl 1536px: 50vh */
-        xl:h-[50vh]
+        xl:h-[50%]
     `}
 `
 

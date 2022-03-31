@@ -32,7 +32,7 @@ const AppContainer = styled.div`
         flex
         
         /* 高、宽 */
-        w-[100vw]
+        w-full
         h-[100vh]
         overflow-x-hidden
     `};
