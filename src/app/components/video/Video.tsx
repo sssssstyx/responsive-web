@@ -23,7 +23,7 @@ const VideoStyle = styled.video`
         left-0
         
         /* 透明度 */
-        opacity-95
+        // opacity-95
         
         /* 长宽 */
         w-full

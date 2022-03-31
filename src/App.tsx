@@ -5,6 +5,13 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import Home from './app/home';
 
+/**
+ *
+ * @Description: Responsive web app for a car video background show.
+ * @author Shy
+ * @date 20/03/2022
+ *
+ */
 
 function App() {
   return (

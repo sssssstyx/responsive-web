@@ -3,6 +3,32 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import { Link } from 'react-router-dom'
 
+/*
+const basedata = {
+    "navigation" : {
+        "navigationMenu": [
+            {
+                "name": "Racing",
+                "link": "racing"
+            },
+            {
+                "name": "Bespoke",
+                "link": "bespoke"
+            },
+            {
+                "name": "Bespoke",
+                "link": "bespoke"
+            },
+            {
+                "name": "Story",
+                "link": "story"
+            },
+        ]
+    }
+}
+*/
+
+
 export default function Items(){
     return (
         <ListStyle>
@@ -10,7 +36,7 @@ export default function Items(){
                 <Link to="/racing">Racing</Link>
             </NavItem>
             <NavItem>
-                <Link to="/discover">Bespoke</Link>
+                <Link to="/bespoke">Bespoke</Link>
             </NavItem>
             <NavItem>
                 <Link to="/careers">Careers</Link>
@@ -21,6 +47,7 @@ export default function Items(){
         </ListStyle>
     )
 }
+
 
 // The styles for ul element on navigation bar
 const ListStyle = styled.ul`

@@ -6,10 +6,7 @@ import tw from 'twin.macro'
 export function Button(){
     return(
         <BtnContainerStyle>
-            
-            <ButtonStyle className={""} onClick={() => {
-                console.log ("1")
-            }}>
+            <ButtonStyle>
                 <Link to={"/GT"}>Discover</Link>
             </ButtonStyle>
         </BtnContainerStyle>

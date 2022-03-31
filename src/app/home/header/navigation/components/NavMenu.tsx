@@ -3,14 +3,10 @@ import styled from "styled-components"
 import tw from 'twin.macro'
 import { FiMenu } from 'react-icons/fi'
 import { VscChromeClose } from 'react-icons/vsc'
-// import { OnClickOutsideHook } from '../../../../hooks/hooks'
 import Items from "./Items"
 
 export default function NavMenu() {
     const [open, setOpen] = useState<boolean | null>(false)
-    
-    // const closeRef = useRef<any>(open);
-    // OnClickOutsideHook(closeRef,() =>setOpen(false))
     
     return (
         <div className="">
