@@ -92,7 +92,6 @@ const NavItem = styled.li`
         h-8
         sm:w-full
         sm:h-full
-        sm:p-0
         
         /* 外部轮廓 */
         my-6

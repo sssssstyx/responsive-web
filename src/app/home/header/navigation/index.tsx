@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro'
 import { Logo } from './components/logo/Logo';
-import NavMenu from './components/NavMenu';
+import { NavMenu } from './components/NavMenu';
 
 export default function Nav() {
+    
+    const [open, setOpen] = useState<boolean | null>(false)
+    
     return (
         <NavbarStyle>
             <LogoContainer>
-                <Logo/>
+                <Logo />
             </LogoContainer>
             <NavMenuContainer>
                 <NavMenu />

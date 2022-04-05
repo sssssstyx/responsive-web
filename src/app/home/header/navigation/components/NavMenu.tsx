@@ -1,17 +1,21 @@
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 import styled from "styled-components"
 import tw from 'twin.macro'
 import { FiMenu } from 'react-icons/fi'
 import { VscChromeClose } from 'react-icons/vsc'
 import Items from "./Items"
 
-export default function NavMenu() {
+export function NavMenu() {
     const [open, setOpen] = useState<boolean | null>(false)
+    
+    const openMenu = useMemo(()=>{
+        return {open}
+    },[open])
     
     return (
         <div className="">
-            <MobileIconStyle className={`${open ? "hidden" : "block"}`} onClick={() => setOpen (true)}/>
-            <MobileCloseIconStyle className={`${open ? "block" : "hidden"}`} onClick={() => setOpen (false)}/>
+            <MobileIconStyle className={`${open ? "hidden" : "block"}`} onClick={() => setOpen (currOpen=> !currOpen)}/>
+            <MobileCloseIconStyle className={`${open ? "block" : "hidden"}`} onClick={() => setOpen (currOpen=> !currOpen)}/>
             <div className={"flex"}>
                 <MobileSideBar className={`${open ? '-translate-x-0' : 'translate-x-full'}`}>
                     <Items />
